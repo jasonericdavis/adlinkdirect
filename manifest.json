@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Ad Link Direct",
+    "version": "0.1",
+    "author": "Jason Davis",
+    "permissions": [
+        "contextMenus", 
+        "webNavigation",
+        "tabs"
+    ],
+    "icons": {
+        "16": "resources/icon16x16.png"
+      },
+    "background": {"scripts": ["main.js"]},
+    "content_scripts": [
+        {
+          "matches": [
+            "https://www.google.com/*"
+          ],
+          "js": ["content.js"]
+        }
+      ]
+}
